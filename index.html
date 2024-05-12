@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Score
+  Rules
+
+  You Picked
+  The House Picked
+
+  You Win
+  You Lose
+
+  Play Again -->
+</head>
+
+<body class="bodyElement">
+
+  <section class="scoreBar-section">
+    <div class="scoreBar-container">
+      <div class="scoreBar-left">
+        <img class="scoreBar-img" src="./images/logo.svg" />
+      </div>
+      <div class="scoreBar-right">
+        <div class="score-title">SCORE</div>
+        <div class="score-number">0</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gameBoard-section">
+    <div class="gameBoard-container">
+      <div class="gameBoard-topPart">
+        <div class="icon-wrapper gameBoard-topPart-left" id="paper-wrapper" name="paper" onclick="choiceSelectHandler(event)">
+          <div class="iconic-wrapper" name="paper">
+            <img class="iconic" src="./images/icon-paper.svg" name="paper"/>
+          </div>
+        </div>
+
+        <div class="icon-wrapper gameBoard-topPart-right" id="scissors-wrapper" name="scissors" onclick="choiceSelectHandler(event)">
+          <div class="iconic-wrapper" name="scissors">
+            <img class="iconic" src="./images/icon-scissors.svg" name="scissors"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-wrapper gameBoard-downPart" id="rock-wrapper" name="rock" onclick="choiceSelectHandler(event)">
+        <div class="iconic-wrapper" name="rock">
+          <img class="iconic" src="./images/icon-rock.svg" name="rock"/>  
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="rules-section">
+    <button class="rules-btn" onclick="showRules()">RULES</button>
+  </section>
+
+  <section class="RuleModal-section doNotDisplay">
+    <div class="RuleModal-container">
+      <div class="RuleModal-titleBar">
+        <div class="RuleModal-title">RULES</div>
+        <div class="RuleModal-closeBtn">
+          <img src="./images/icon-close.svg" onclick="closeRules()"/>
+        </div>
+      </div>
+      <img class="RuleModal-img" src="./images/image-rules.svg"/>
+    </div>
+  </section>
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
